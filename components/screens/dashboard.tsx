@@ -200,6 +200,18 @@ export function DashboardScreen() {
               <span className="text-muted-foreground">HORA:</span>
               <span className="text-secondary font-bold">14:00 - NO SÉ</span>
             </div>
+            <div className="flex justify-between items-start pb-4 border-b border-primary/20 gap-3">
+              <span className="text-muted-foreground">LUGAR:</span>
+              <a
+                href="https://maps.app.goo.gl/SnaA4MdHEdN8Zi1x5"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary font-bold underline hover:opacity-80 text-right"
+                aria-label="Ubicación en Google Maps - Mallasa Calle2. Calle C"
+              >
+                Mallasa Calle2. Calle C
+              </a>
+            </div>
             <div className="flex justify-between items-center">
               <span className="text-muted-foreground">ESTADO:</span>
               <span className={`font-bold ${statusColorClass}`}>
@@ -226,6 +238,18 @@ export function DashboardScreen() {
               </p>
               <p>
                 <span className="text-primary">HORA:</span> 14:00 - NO SÉ
+              </p>
+              <p>
+                <span className="text-primary">LUGAR:</span>{' '}
+                <a
+                  href="https://maps.app.goo.gl/SnaA4MdHEdN8Zi1x5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-secondary underline hover:opacity-80"
+                  aria-label="Ubicación en Google Maps - Mallasa Calle2. Calle C"
+                >
+                  Mallasa Calle2. Calle C
+                </a>
               </p>
               <p className="text-secondary">Estas cordialmente invitado mi pana.</p>
               <p>

@@ -87,7 +87,6 @@ export function SquadScreen() {
         >
           <div className="flex-1">
             <p className="font-mono font-bold text-foreground">{guest.nombre}</p>
-            <p className="text-xs font-mono text-muted-foreground mt-1">{guest.codigo_acceso}</p>
           </div>
           <div
             className="w-6 h-6 rounded-lg border-2 border-primary flex-shrink-0"
