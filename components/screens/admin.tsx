@@ -13,7 +13,9 @@ export function AdminScreen() {
   const [isCreating, setIsCreating] = useState(false);
 
   const ADMIN_PASSWORD = 'LEVEL21';
-  const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000';
+  const API_URL = process.env.NODE_ENV === 'production'
+    ? 'https://cumpleback.vmoop.com'
+    : (process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000');
 
   // Auto-authenticate if user is admin (ID 1)
   useEffect(() => {

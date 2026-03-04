@@ -63,7 +63,9 @@ export function AppProvider({ children }: Readonly<{ children: React.ReactNode }
   const [colorRevealEnabled, setColorRevealEnabled] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000';
+  const API_URL = process.env.NODE_ENV === 'production'
+    ? 'https://cumpleback.vmoop.com'
+    : (process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000');
 
   // Cargar invitados desde el backend
   useEffect(() => {

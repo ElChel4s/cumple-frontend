@@ -8,7 +8,9 @@ export function RSVPScreen() {
   const { setScreen, currentUser, setCurrentUser, guests, setGuests } = useApp();
   const [isLoading, setIsLoading] = useState(false);
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000';
+  const API_URL = process.env.NODE_ENV === 'production'
+    ? 'https://cumpleback.vmoop.com'
+    : (process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000');
 
   const handleResponse = async (status: 'attending' | 'pending' | 'declined') => {
     if (!currentUser) return;
